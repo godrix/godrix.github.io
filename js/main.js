@@ -1,5 +1,5 @@
 var span = document.getElementById('txt');
-var contentxt = 'odriz://a';
+var contentxt = 'arlos Godri';
 
 function writetxt(str, el) {
     var char = str.split('').reverse();
