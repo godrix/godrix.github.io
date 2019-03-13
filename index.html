@@ -1,175 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Godrix</title>
-  <meta name="theme-color" content="#262728">
-	<style type="text/css">
-  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-	body{
-	margin: 0;
-	padding: 0;
-	 background: #262728;
+---
+layout: default
+title: Home
+---
 
-	}
-		.sublime {
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 1%;
-  list-style: none;
-  border-top: 25px solid #b4b4b4;
-  
-  background: #262728;
-  color: #f1f1f1;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: 200;
-  font-size: 1.1em;
-  /* Colors */
-}
-.sublime li {
-  min-height: 25px;
-  line-height: 25px;
-}
-.sublime .buttons {
-  min-height: 0;
-  position: absolute;
-  top: -18px;
-  border-radius: 100%;
-  width: 13px;
-  height: 13px;
-  background-color: #ff5d5b;
-  border: 1px solid #e64344;
-}
-.sublime .buttons:before, .sublime .buttons:after {
-  position: absolute;
-  content: "";
-  width: 13px;
-  height: 13px;
-  border-radius: 100%;
-  top: -1px;
-}
-.sublime .buttons:before {
-  left: 20px;
-  border: 1px solid #e3a041;
-  background-color: #ffbc4c;
-}
-.sublime .buttons:after {
-  left: 40px;
-  border: 1px solid #13ad46;
-  background-color: #00c956;
-}
-.sublime .tab {
-  margin-left: 2%;
-  list-style: none;
-}
-.sublime .blue {
-  color: #66d9ef;
-}
-.sublime .purple {
-  color: #8a7bff;
-}
-.sublime .red {
-  color: #e92772;
-}
-.sublime .green {
-  color: #a6e22d;
-}
-.sublime .orange {
-  color: #fd9720;
-}
-.sublime .yellow {
-  color: #e6db74;
-}
-.sublime .gray {
-  color: #8f908a;
-}
-.sublime .cursor:before {
-  opacity: 0;
-  content: "|";
-  color: #f1f1f1;
-  -webkit-animation: blink 0.8s infinite;
-          animation: blink 0.8s infinite;
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}}
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-a {
-  color: inherit;
-}
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-	</style>
-</head>
-<body>
-	<ul class="sublime">
-				  <li class="buttons"></li>
-				  <li><span class="orange">$breakpoints</span>: (phone: <span class="blue">320px</span>, tablet: <span class="blue">768px</span>, desktop: <span class="blue">1024px</span>);</li>
-				  <li></li>
-				  <li><span class="gray">/** Author : Carlos G. godri <br>
-                                  Description : My CV <br>
-                                  Date : 18.02.2018
-                                  **/</span></li><br>
-          <li>
-            <span class="green">
-              .I-am</span> {<br>
-              <span class="blue">&nbsp; Name</span>: <span class="yellow">"Carlos Gabriel Godri"</span>; <br>
-              <span class="blue">&nbsp; Job</span>:  <span class="blue">Front-end Developer</span>; <br>
-              <span class="blue">&nbsp; Github</span>:  <span class="blue">@godrix</span>; <br>
-              <span class="blue">&nbsp; Instagram</span> <span class="blue"> @godrizilla</span>; <br>
-              <span class="blue">&nbsp; Twitter</span>  <span class="blue">@godrizilla</span>; <br>
-              <span class="blue">&nbsp; E-Mail</span>  <span class="blue">cggodri@gmail.com</span>; <br>
-            }
-          </li>
-          <br>
-            <span class="green">
-              .About</span> {<br>
-              <span class="blue">&nbsp; Content</span>: <span class="yellow">"A FUTURE SOFTWARE ENGINEER, JAVASCRIPT ENTHUSIAST, COFFEE LOVER, CREATOR AND HOST AT @COMMITCAST. <br>WORKS WITH THE WEB AND MOBILE APPLICATION, BOOKWORM AND HATES PEPPER."</span>; <br>
-            }
-          </li>
-         <br> <br>
-          <span class="green">
-              .Skills </span> {<br>
-              <span class="blue">&nbsp; HTML</span>: <span class="purple">90</span><span class="red">%</span>; <br>
-              <span class="blue">&nbsp; CSS</span>:  <span class="purple">90</span><span class="red">%</span>; <br>
-              <span class="blue">&nbsp; JavaScript</span>:  <span class="purple">80</span><span class="red">%</span>; <br>
-             <br>
-            }
-          </li>
-         <br> <br>
-          <span class="green">
-              .Education-information </span> {<br>
-             <span class="blue">&nbsp; University</span>: <span class="yellow">"Instituto Federal Catarinense"</span>; <br>
-              <span class="blue">&nbsp; Course</span>: <span class="yellow">"Graduação em Sistemas para Internet"</span>; <br>
-             <br>
-            }
-          </li>
-         <br> <br>
-				  <li><span class="red">@include media</span>(<span class="yellow">"&gt;phone"</span>,<span class="yellow"> "&lt;=tablet"</span>) {</li>
-				  <ul class="tab">
-					  <li><span class="blue">number:</span> <span class="purple">47.988386038</span><span class="red">%</span>;<span class="cursor"></span></li>
-				  </ul>
-				  <li>}</li>
-				</ul>
-</body>
-</html>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}"> Posts Antigos</a>
+  {% else %}
+    <span class="pagination-item older"> Posts Antigos</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Novos Posts</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Novos Posts</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Novos Posts</span>
+  {% endif %}
+</div>

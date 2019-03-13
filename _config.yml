@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://godrix.github.io
+title: Godrizilla
+tagline: ARRRrrrr
+description: Apenas um blog sobre tecnologia, a vida, o universo e tudo mais
+paginate: 3

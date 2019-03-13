@@ -1,0 +1,54 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+
+      <h1><img src="https://godrizilla.github.io/public/images/logo-godrizilla.png" class="title-img" width="90%"></h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
+        <a href="/">Home</a>
+      </li>
+       <li>
+         <small><a href="https://pt.stackoverflow.com/users/24168/godrix" target="_blank"  class="li_stile"><font color="#000">Stackoverflow</font></a></small>
+      </li>
+      <li>
+          <small> <a href="https://www.instagram.com/godrizilla/" target="_blank"  class="li_stile" ><font color="#000">Instagram</font></a></small>
+      </li>
+      <li>
+          <small><a href="https://twitter.com/godrizilla" target="_blank"  class="li_stile"><font color="#000">Twitter</font></a></small>
+      </li>
+      <li>
+          <small> <a href="https://github.com/godrix" class="li_stile" target="_blank" ><font color="#000">Github</font></a></small>
+      </li>
+      <li>
+          <small><a href="/about" class="li_stile" ><font color="#000">About</font></a></small>
+      </li>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+              <a href="{{ node.url }}">{{ node.title }}</a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <!--li class="sidebar-nav-item"><a href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a></li>
+      <li class="sidebar-nav-item"><a href="{{ site.github.repo }}">GitHub project</a></li>
+      <li class="sidebar-nav-item">Currently v{{ site.version }}</li-->
+    </ul>
+
+    <!--<p>  &copy; {{ site.time | date: '%Y' }}.
+
+      </p>-->
+  </div>
+</div>
