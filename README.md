@@ -34,7 +34,7 @@
 ### Chrome Extension
   * []()
   >
-#Aplicativos Mobile
+# Aplicativos Mobile
   * [Death Cosmo](https://play.google.com/store/apps/details?id=com.renovation.death)
   >
    * [Lanterna](https://play.google.com/store/apps/details?id=com.godrix.landerna)
