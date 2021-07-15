@@ -20,12 +20,6 @@
   * [CalcDex](https://github.com/godrix/CalcDex/)
   >fjskoçjfj
   
-
-  
-### Sites
-  * [D'Bistro Restaurante](https://github.com/godrix/dbistrorestaurante)
-  >
-
 ### Aplicativos Mobile
   * [Death Cosmo](https://play.google.com/store/apps/details?id=com.renovation.death)
   >
