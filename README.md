@@ -23,9 +23,7 @@
   * [CalcDex](https://github.com/godrix/CalcDex/)
   >fjskoçjfj
   
-### PHP
-  * [EncurtaLink](https://github.com/godrix/EncurtadorDeLinks)
-  >lorem ipsum
+
   
 ### Sites
   * [D'Bistro Restaurante](https://github.com/godrix/dbistrorestaurante)
