@@ -16,9 +16,6 @@
   * [Lookup-MAC-Address](https://github.com/godrix/Lookup-MAC-Address)
   >fjskfjskldfjsd
   
-  * [Lookup-MAC-Address](https://github.com/godrix/Lookup-MAC-Address)
-  >fjskfjskldfjsd
-  
 ### PWA
   * [CalcDex](https://github.com/godrix/CalcDex/)
   >fjskoçjfj
